@@ -1,0 +1,41 @@
+:root{
+    /* chrome 默认的 1rem = 16px,每个图片的宽度为 129px */
+    /* 为了保证移动端的适配,这里使用了 rem 作为单位 */
+    --img-width:8.0625rem;
+    --img-height:73.125rem;
+    --perspective-width:25rem;
+    --music-text-color:orange;
+    --music-text-font-size:1.5rem;
+}
+
+body{
+    background:url("../img/bg.jpg");
+}
+
+.container{
+    margin: 0 auto;
+    width:var(--img-width);
+    perspective:var(--perspective-width);
+    position: relative;
+}
+
+.stage{
+    /* 关键属性 */
+    transform-style: preserve-3d;
+	perspective-origin: 50% 50%;
+}
+
+.stage > div{
+    position: absolute;
+    width: var(--img-width);
+    height:var(--img-height);
+}
+
+.audio-bar{
+    font-size:var(--music-text-font-size);
+    color:var(--music-text-color);
+    position: absolute;
+    right:1rem;
+    top:0.3rem;
+    z-index: 10086;
+}

@@ -1,0 +1,12 @@
+{
+  "name": "css3d",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build":"tsc --module system --outfile js/main.prod.js js/main.ts"
+  },
+  "dependencies": {
+    "typescript": "^2.6.2"
+  }
+}
